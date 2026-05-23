@@ -44,13 +44,19 @@ export default function Payment() {
               <div className={`inline-flex items-center gap-2 ${method.color} text-white text-sm font-medium px-3 py-1 rounded-full mb-6`}>
                 {method.name}
               </div>
-              <div className="w-48 h-48 mx-auto bg-surface-3 rounded-xl flex items-center justify-center mb-4 border border-white/5">
-                <div className="text-center text-text">
-                  <svg className="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
-                  </svg>
-                  <span className="text-xs">此处放收款码</span>
-                </div>
+              <div className="w-48 h-48 mx-auto rounded-xl overflow-hidden mb-4 border border-white/5">
+                {method.id === 'wechat' ? (
+                  <img src="/1-/wechat-qr.jpg" alt="微信收款码" className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full bg-surface-3 flex items-center justify-center">
+                    <div className="text-center text-text">
+                      <svg className="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                      </svg>
+                      <span className="text-xs">此处放收款码</span>
+                    </div>
+                  </div>
+                )}
               </div>
               <p className="text-text text-sm">{method.qrText}</p>
             </motion.div>
