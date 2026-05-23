@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Contact from './components/Contact'
 import Home from './pages/Home'
@@ -8,7 +8,7 @@ import FAQPage from './pages/FAQPage'
 
 function App() {
   return (
-    <BrowserRouter basename="/1-">
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/:toolId" element={<ToolPage />} />
       </Routes>
       <Contact />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
