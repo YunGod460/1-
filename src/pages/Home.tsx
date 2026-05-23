@@ -30,13 +30,15 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {categories.map((cat) => (
-              <a
+              <button
                 key={cat}
-                href={`#cat-${cat}`}
-                className="px-4 py-2 text-sm bg-surface-2 border border-white/5 rounded-full text-text hover:text-text-heading hover:border-primary/30 transition-all"
+                onClick={() => {
+                  document.getElementById(`cat-${cat}`)?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="px-4 py-2 text-sm bg-surface-2 border border-white/5 rounded-full text-text hover:text-text-heading hover:border-primary/30 transition-all cursor-pointer"
               >
                 {cat}
-              </a>
+              </button>
             ))}
           </div>
         </motion.div>
