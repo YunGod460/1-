@@ -46,7 +46,7 @@ export default function Payment() {
               </div>
               <div className="w-48 h-48 mx-auto rounded-xl overflow-hidden mb-4 border border-white/5">
                 {method.id === 'wechat' ? (
-                  <img src="/1-/wechat-qr.jpg" alt="微信收款码" className="w-full h-full object-cover" />
+                  <img src="/wechat-qr.jpg" alt="微信收款码" className="w-full h-full object-cover" />
                 ) : (
                   <div className="w-full h-full bg-surface-3 flex items-center justify-center">
                     <div className="text-center text-text">

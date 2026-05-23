@@ -33,6 +33,22 @@ export const tools: Tool[] = [
     color: '#22c55e',
   },
   {
+    id: 'codex',
+    name: 'Codex CLI',
+    description: 'OpenAI 官方 CLI 编程工具，终端中对话式编程，自动写代码和执行命令',
+    category: '编程助手',
+    icon: '⚡',
+    color: '#10b981',
+  },
+  {
+    id: 'windsurf',
+    name: 'Windsurf',
+    description: 'Codeium 出品的 AI IDE，内置智能代码补全和 Agent 模式，免费版功能强大',
+    category: '编程助手',
+    icon: '🏄',
+    color: '#6366f1',
+  },
+  {
     id: 'deepseek',
     name: 'DeepSeek',
     description: '国产最强开源大模型，API 价格低、中文能力强，适合国内开发者',
@@ -71,6 +87,22 @@ export const tools: Tool[] = [
     category: 'AI Agent',
     icon: '🦀',
     color: '#14b8a6',
+  },
+  {
+    id: 'crewai',
+    name: 'CrewAI',
+    description: '多 AI Agent 协作框架，让多个 AI 角色分工合作完成复杂任务',
+    category: 'AI Agent',
+    icon: '👥',
+    color: '#f97316',
+  },
+  {
+    id: 'auto-gpt',
+    name: 'AutoGPT',
+    description: '自主 AI Agent，给定目标后自动分解任务、执行、迭代，无需人工干预',
+    category: 'AI Agent',
+    icon: '🎯',
+    color: '#e11d48',
   },
 ]
 
