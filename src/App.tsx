@@ -1,24 +1,23 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Intro from './components/Intro'
-import Pricing from './components/Pricing'
-import Payment from './components/Payment'
-import HowItWorks from './components/HowItWorks'
-import FAQ from './components/FAQ'
 import Contact from './components/Contact'
+import Home from './pages/Home'
+import ClaudeCodePage from './pages/ClaudeCodePage'
+import ToolPage from './pages/ToolPage'
+import FAQPage from './pages/FAQPage'
 
 function App() {
   return (
-    <>
+    <BrowserRouter basename="/1-">
       <Navbar />
-      <Hero />
-      <Intro />
-      <Pricing />
-      <Payment />
-      <HowItWorks />
-      <FAQ />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/claude-code" element={<ClaudeCodePage />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/:toolId" element={<ToolPage />} />
+      </Routes>
       <Contact />
-    </>
+    </BrowserRouter>
   )
 }
 
